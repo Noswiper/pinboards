@@ -1,0 +1,22 @@
+li {
+    list-style: circle;
+  }
+  
+  .list {
+    list-style: square;
+  }
+  
+  #msg {
+    font-family: monospace;
+  }
+
+  .light-theme {
+    color: #000000;
+    background: #00FF00;
+  }
+
+  .body {
+    display: block;
+    width: 200px;
+    height: 300px;
+  }

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <script type="module" src="system1.js"></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Simple website</title>
+ <style>
+  .system1 {
+    position: absolute;
+    z-index: -1;
+      top: 25px;
+      left: 25px;
+  }
+  .save {
+    position: absolute;
+z-index: 2;
+  }
+  .form {
+    position: absolute;
+    z-index: 2;
+    top: 75px;
+    left: 100px;
+  }
+  .lookup {
+    position: absolute;
+    z-index: 2;
+    top: 225px;
+    left: 100px;
+  }
+  .abc-1 {
+    white-space: nowrap;
+    position: absolute;
+    z-index: 2;
+      top: 75px;
+      left: 1000px;
+    }
+  .abc-2 {
+    white-space: nowrap;
+    position: absolute;
+    z-index: 2;
+      top: 150px;
+      left: 1000px;
+  }
+  .abc-3 {
+    white-space: nowrap;
+    position: absolute;
+    z-index: 2;
+      top: 235px;
+      left: 1000px;
+  }
+  .abc-4 {
+    white-space: nowrap;
+    position: absolute;
+    z-index: 2;
+      top: 370px;
+      right: 530px;
+  }
+  .abc-5 {
+    white-space: nowrap;
+    position: absolute;
+    z-index: 2;
+      top: 55px;
+      left: 1560px;
+  }
+  .abc-6 {
+    white-space: nowrap;
+    position: absolute;
+    z-index: 2;
+      top: 600px;
+      left: 1490px;
+  }
+  .abc-7 {
+    white-space: nowrap;
+    position: absolute;
+    z-index: 2;
+      top: 630px;
+      left: 1570px;
+  }
+  .abc-8 {
+    white-space: nowrap;
+    position: absolute;
+    white-space: nowrap;
+    z-index: 2;
+      top: 630px;
+      left: 1900px;
+  }
+  .plist {
+    font-size: 27px;
+    position: absolute;
+    z-index: 2;
+      top: 75px;
+      left: 1000px;
+  }
+  </style>
+</head>
+<body>
+  <div class="container"></div>
+  <script type="module" src="system1.js"></script>
+  <script type="module" src="tagouts.js"></script>
+  
+  
+
+  <form class="form" action="/savesystem1" method="POST">
+    <br><br>
+    <label for="valve">Valve Name</label>
+			<select id="valve" name="valve">
+        <option value="abc1">ABC-1</option>
+        <option value="abc2">ABC-2</option>
+        <option value="abc3">ABC-3</option>
+        </select>
+      <label for="status">Select valve status</label>
+      <select id="status" name="status">
+        <option value="Untagged">Untagged</option>
+        <option value="Caution_Tag">Caution Tag</option>
+        <option value="Danger_Tag_shut">Danger Tag shut</option>
+        <option value="Danger_Tag_open">Danger Tag open</option>
+        <option value="Work">Valve under work</option>
+        <option value="Removed">Valve Removed</option>  
+      </select>
+      <label for="wafpermit">WAF/PERMIT</label>
+      <input id="waf" name="waf" placeholder="A1234" required>
+      <br><br>
+
+			<button type ="submit">Submit</button>
+        </form>
+        <br>
+        
+        <a href="url">Log History</a>
+        <a href="url">Systems</a>
+        <br>
+        Mode: Editing
+  <img src="images/system1.png" alt="system" usemap="#systemmap" class="system1">
+
+<map name="systemmap">
+  <area shape="rect" coord="0,0,0,0" alt="abc-1" onclick="myFunction()">
+  <area shape="rect" coord="0,0,0,0" alt="abc-2" onclick="myFunction()">
+  <area shape="rect" coord="0,0,0,0" alt="abc-3" onclick="myFunction()">
+</map>
+
+  <p class="abc-1" id="abc1statusresult" value="">ABC-1</p>
+  <p class="abc-2" id="abc2statusresult">ABC-2</p>
+  <p class="abc-3" id="abc3statusresult">ABC-3</p>
+  <p class="abc-4" id="abc4statusresult">ABC-4</p>
+  <p class="abc-5" id="abc5statusresult">ABC-5</p>
+  <p class="abc-6" id="abc6statusresult">ABC-6</p>
+  <p class="abc-7" id="abc7statusresult">ABC-7</p>
+  <p class="abc-8" id="abc8statusresult">ABC-8</p>
+
+  
+  <form class="lookup" action="/searchstatus" method="GET">
+    <label for="valvesearch">Lookup Valve</label>
+    <select id="valvesearch" name="valvesearch">
+      <option valvesearch="abc1">ABC-1</option>
+      <option valvesearch="abc2">ABC-2</option>
+      <option valvesearch="abc3">ABC-3</option>
+      <option valvesearch="abc4">ABC-4</option>
+      <option valvesearch="abc5">ABC-5</option>
+      <option valvesearch="abc6">ABC-6</option>
+      <option valvesearch="abc7">ABC-7</option>
+      <option valvesearch="abc8">ABC-8</option>
+      <label>WAF/Permit:</label>
+  </form>
+  
+  </body>
+</html>

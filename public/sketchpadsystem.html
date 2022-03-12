@@ -1,0 +1,136 @@
+<html>
+<head>
+<title>Sketchpad</title>
+
+    
+
+<style>
+/* Some CSS styling */
+#sketchpadapp {
+    /* Prevent nearby text being highlighted when accidentally dragging mouse outside confines of the canvas */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.rightside {
+    float:left;
+    top: 50px;
+    position: absolute;
+    z-index: 2;
+    margin-left:10px;
+}
+#sketchpad {
+    z-index: 3;
+    border:2px solid #888;
+    border-radius:4px;
+    position:absolute; /* Necessary for correct mouse co-ords in Firefox */
+}
+
+.table, th, td {
+    padding: 10px;
+    table-layout: fixed;
+    width: 150px;
+}
+
+.abc1 {
+    border-style: solid;
+    border:2px solid red;
+    fill: red;
+    border-radius:4px;
+    position:absolute;
+    z-index: 4;
+    display: block;
+}
+
+.abc-1 {
+    white-space: nowrap;
+    position: absolute;
+    z-index: 2;
+      top: 70px;
+      left: 1000px;
+    }
+.abc-2 {
+    white-space: nowrap;
+    position: absolute;
+    z-index: 2;
+      top: 140px;
+      left: 1000px;
+  }
+.abc-3 {
+    white-space: nowrap;
+    position: absolute;
+    z-index: 2;
+      top: 215px;
+      left: 1000px;
+  }
+.valvedata {
+    display: none;
+    z-index: 4;
+}
+
+.status {
+    display: inline;
+}
+
+.tagproposal {
+    position: absolute;
+    top: 100px;
+    z-index: 4;
+    display: block;
+    margin: 20px;
+    z-index: 8
+}
+
+.system1 {
+    position: absolute;
+    z-index: 2;
+      top: 100px;
+      left: 25px;
+  }
+</style>
+</head>
+<script src="store.js"></script>
+<script type="module" src="system1.js"></script>
+<script type="module" src="tagouts.js"></script>
+<body onload="init()">
+    <div id="valvedata" class="valvedata"></div>
+    <div class="tagproposal" id="proposal">
+        <table id="table">
+            <tr>
+                <th>Valve</th>
+                <th>Status</th>
+            </tr>
+           <tr>
+               
+   <th><button onclick="newline()">Add New Line</button></th>
+           </tr>
+        </table>
+    </div>
+    
+        <div class="rightside">
+            <input type="submit" value="Clear Sketchpad" onclick="clearCanvas(canvas,ctx);">
+            <button onclick="tagoutproposal()">Enter Tag Proposal</button>
+            <input type="submit" value="Toggle Sketchpad" onclick="togglesketchpad()"> Mode: editing
+            <div id="div1" class="system1">
+            <img src="images/system1.png" id="p1" alt="System" usemap="#system" width="2881" height="1955">
+            <map name="system">
+                <area shape="rect" class="abc1" coords="999,95,1050,128" alt="abc1" onclick="getabc1()"><area>
+                <area shape="rect" class="abc1" coords="995,168,1050,208" alt="abc1" onclick="getabc2()"><area>
+                <area shape="rect" class="abc1" coords="994,245,1050,290" alt="abc1" onclick="getabc3()"><area>
+            <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm"><area>
+  <p class="abc-1" id="abc1statusresult" value="">ABC-1</p>
+  <p class="abc-2" id="abc2statusresult">ABC-2</p>
+  <p class="abc-3" id="abc3statusresult">ABC-3</p>
+            </map>  
+            </div>
+            <canvas id="sketchpad" height="2000" width="2800">
+            </canvas>
+            <script src="sketchpad.js" type="text/javascript"></script>
+        </div>
+    </div>
+    
+</body>
+</html>

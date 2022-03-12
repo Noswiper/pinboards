@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <script type="module" src="system1.js"></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Simple website</title>
+ <style>
+  .system1 {
+    position: absolute;
+    z-index: -1;
+      top: 25px;
+      left: 25px;
+  }
+  .save {
+    position: absolute;
+z-index: 2;
+  }
+  .form {
+    position: absolute;
+    z-index: 2;
+    top: 75px;
+    left: 100px;
+  }
+  .list {
+    position: absolute;
+    z-index: 2;
+      top: 75px;
+      left: 1000px;
+    }
+  .CW-159l {
+    position: absolute;
+    z-index: 2;
+      top: 150px;
+      left: 1000px;
+  }
+  .abc-3 {
+    position: absolute;
+    z-index: 2;
+      top: 235px;
+      left: 1000px;
+  }
+  .plist {
+    font-size: 27px;
+    position: absolute;
+    z-index: 2;
+      top: 75px;
+      left: 1000px;
+  }
+  </style>
+</head>
+<body>
+  <div class="container"></div>
+  <script type="module" src="system1.js"></script>
+  <script type="module" src="tagouts.js"></script>
+  <form class="form" action="/savesystem1" method="POST">
+    <br><br>
+			<label>Valve Name</label>
+			<select id="valve" name="valve">
+        <option value="abc1">ABC-1</option>
+        <option value="abc2">ABC-2</option>
+        <option value="abc3">ABC-3</option>
+			<br><br>
+      <label>Username</label>
+      <br><br>
+      <input type="username" id = "username" name="username" placeholder="username" required>
+      <br><br>
+      <select id="status" name="status">
+        <option value="Untagged">Untagged</option>
+        <option value="Caution_Tag">Caution Tag</option>
+        <option value="Danger_Tag_shut">Danger Tag shut</option>
+        <option value="Danger_Tag_open">Danger Tag open</option>  
+      </select>
+      <br><br>
+			<button type ="submit">Submit</button>
+        </form>
+  <img src="images/system1.png" class="system1">
+
+  <p class="list" id="abc1statusresult" value="">ABC-1</p>
+  <p class="CW-159l" id="abc2statusresult">ABC-2</p>
+  <p class="abc-3" id="abc3statusresult">ABC-3</p>
+  </body>
+</html>
